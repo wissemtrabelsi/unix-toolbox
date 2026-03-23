@@ -24,6 +24,7 @@ int main(int argc, char *argv[])
     fd_src = open(argv[1], O_RDONLY);
     if (fd_src < 0) {
         print_error("Error: Cannot open source file: ", argv[1]);
+        close(fd_src);
         return 1;
     }
 
@@ -66,7 +67,6 @@ int main(int argc, char *argv[])
     // Read from source and write to destination
     while ((bytes_read = read(fd_src, buf, sizeof(buf))) > 0) {
         ssize_t total_written = 0;
-
         // Handle partial writes
         // (ensures all bytes are written even if write() returns less)
         while (total_written < bytes_read) {
