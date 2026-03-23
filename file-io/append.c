@@ -4,25 +4,7 @@
 #include <fcntl.h>      // For open() and flags like O_RDONLY, O_APPEND
 #include <unistd.h>     // For read(), write(), close()
 #include <sys/stat.h>   // For fstat() and struct stat
-
-// Calculates string length without using strlen()
-static size_t my_strlen(const char *s)// static: limits visibility to this file only, prevents naming conflicts with other .c files
-{
-    size_t len = 0;//unsigned type (never negative)
-    while (s[len])
-        len++;
-    return len;
-}
-
-// Prints an error message with an optional filename to stderr
-static void print_error(const char *msg, const char *filename)
-{
-    write(2, msg, my_strlen(msg));
-    if (filename) {
-        write(2, filename, my_strlen(filename));
-        write(2, "\n", 1);
-    }
-}
+#include "utils.h"
 
 int main(int argc, char *argv[])
 {
