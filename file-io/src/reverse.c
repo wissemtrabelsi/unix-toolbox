@@ -12,7 +12,7 @@ void reverse(char *s)
 {
     char c;
     size_t len = my_strlen(s);
-    for (int i = 0; i < (len / (2)); i++)
+    for (size_t i = 0; i < (len / (2)); i++)
     {
         c = s[i];
         s[i] = s[len - 1 - i];
@@ -20,7 +20,7 @@ void reverse(char *s)
     }
 }
 
-int main(int argc ,char **argv)
+int do_reverse(int argc ,char **argv)
 {
     if (argc != 2)
     {
@@ -56,7 +56,7 @@ int main(int argc ,char **argv)
         write(1,line,my_strlen(line));
         write(1,"\n",1);
     }
-    free(line);
+    free(line);//getline() automatically allocates memory on the heap
     fclose(f);
     return 0;
 }

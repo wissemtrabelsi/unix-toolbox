@@ -5,7 +5,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/stat.h>
-int main(int argc, char *argv[])
+int do_copy(int argc, char *argv[])
 {
     //Usage check
     if (argc != 3)

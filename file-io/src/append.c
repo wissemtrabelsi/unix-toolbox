@@ -6,7 +6,7 @@
 #include <sys/stat.h>   // For fstat() and struct stat
 #include "utils.h"
 
-int main(int argc, char *argv[])
+int do_append(int argc, char *argv[])
 {
     int fd_src, fd_dst;
     char buf[4096];
