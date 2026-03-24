@@ -7,6 +7,8 @@ all: $(TARGET)
 
 $(TARGET): $(SRC)
 	$(CC) $(CFLAGS) $(SRC) -o $(TARGET)
+test: $(TARGET)
+	bash tests/test.sh 
 
 clean:
 	rm -rf *.o $(TARGET)
