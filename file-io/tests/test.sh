@@ -37,7 +37,8 @@ echo "I know C" >/tmp/a.txt
 echo "I know Git" >/tmp/b.txt
 $FILETOOL append /tmp/a.txt /tmp/b.txt
 result=$(cat /tmp/b.txt)
-#why printf
+
+#use of printf to interpret \n
 check "$result" "$(printf 'I know Git\nI know C')" "append: adds file content to the end"
 
 #test 4: reverse
