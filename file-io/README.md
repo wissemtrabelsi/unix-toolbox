@@ -35,7 +35,7 @@ make clean    # remove binary
 ```
 
 ## Implementation Notes
-
+- Automated test suite written in Bash (`tests/test.sh`) validates all tools and edge cases
 - All tools use raw POSIX syscalls — no `stdio.h`
 - Same-file detection using `fstat()` with `st_ino` and `st_dev` prevents infinite loops
 - Partial write handling ensures all bytes are written even if `write()` returns less
