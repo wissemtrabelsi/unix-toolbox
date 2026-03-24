@@ -2,6 +2,7 @@
 // Created by Wissem Trabelsi
 //
 
+#define _POSIX_C_SOURCE 200809L  // enable POSIX.1-2008 functions on Linux: fdopen, getline
 #include <stdio.h>
 #include <fcntl.h>
 #include <stdlib.h>
