@@ -18,7 +18,7 @@ size_t my_strlen(const char *str)
 void print_error(const char *msg, const char *filename)
 {
     write(2, msg, my_strlen(msg));
-    if (filename) {
+    if (filename) {//!= NULL print it.
         write(2, filename, my_strlen(filename));
         write(2, "\n", 1);
     }

@@ -4,5 +4,5 @@
 
 #ifndef ATTRIBUTE_H
 #define ATTRIBUTE_H
-int attribute(char *filename);
+int do_attrib(int argc, char *argv[]);
 #endif //ATTRIBUTE_H
