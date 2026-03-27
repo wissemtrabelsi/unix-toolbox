@@ -24,10 +24,10 @@ int do_attrib(int argc, char *argv[])
     printf("File Type: %o\n", st.st_mode); //%o octal
     char buf[32];
     format_size(st.st_size,buf,sizeof(buf));
-    printf("File size: %s\n", buf); //long int
-    printf("Permissions: %o\n", st.st_mode);
-    printf("Number of hard links: %lu\n", st.st_nlink); //unsigned long
-    printf("Last modified time: %ld\n", st.st_mtime);
+    printf("File size: %s \n", buf); //long int
+    printf("Permissions: %o \n", st.st_mode);
+    printf("Number of hard links: %hu \n", st.st_nlink); //unsigned short
+    printf("Last modified time: %ld \n", st.st_mtime);
 
 
     return 0;

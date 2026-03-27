@@ -26,7 +26,7 @@ void print_error(const char *msg, const char *filename)
 
 // converts bytes to human readable string (KiB/MiB/GiB)
 // (double) cast ensures decimal division instead
-void format_size_h(off_t size, char *buf, size_t buf_len)
+void format_size(off_t size, char *buf, size_t buf_len)
 {
     //only switch units when the number is actually readable in the next unit
     if (size < 2048)
