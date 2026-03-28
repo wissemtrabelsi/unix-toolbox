@@ -50,6 +50,6 @@ check "$?" "1" "lx: fails with unknown args"
 
 
 #cleanup
-rm -f /tmp/test_file.txt /tmp/test_ln_file.txt /tmp/hard.txt /tmp/hard2.txt /tmp/sym1.txt /tmp/sym2.txt
+rm -f ../lx /tmp/test_file.txt /tmp/test_ln_file.txt /tmp/hard.txt /tmp/hard2.txt /tmp/sym1.txt /tmp/sym2.txt
 echo ""
 echo "Results: ✅ $PASS passed, ❌ $FAIL failed"
