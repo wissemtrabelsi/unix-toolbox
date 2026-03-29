@@ -17,6 +17,10 @@ while [[ $# -gt 0 ]]; do
         shift 2
         ;;
     --log)
+        if [ -z "$2" ]; then # -z means "is this string empty"
+            echo "Error: --log requires a file path" >&2
+            exit 1
+        fi
         LOG="$2"
         shift 2
         ;;
