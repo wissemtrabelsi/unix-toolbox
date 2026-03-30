@@ -109,7 +109,10 @@ while true; do
         log_msg "WARNING" "CPU spike detected: $CPU%"
     fi
     if [ "$DISK" -gt "$DISK_THRESHOLD" ]; then
-        log_msg "WARNING" "DISK usage spike detected: $DISK%"
+        log_msg "WARNING" "DISK usage criticaal: $DISK% - triggering auto backup"
+        mkdir -p backup
+        cp logs/*.log backup/ 2>/dev/null
+        log_msg "INFO" "Logs backed up to backup/"
     fi
     
     sleep "$INTERVAL"

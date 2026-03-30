@@ -5,3 +5,4 @@ filetool
 lx
 logs/
 *.log
+backup/
