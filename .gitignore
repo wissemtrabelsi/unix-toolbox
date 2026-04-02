@@ -6,3 +6,4 @@ lx
 logs/
 *.log
 backup/
+putil

@@ -13,11 +13,11 @@
 
 void my_handler(int signum){
     if (signum == SIGINT){
-        print_error("Stopping pwatch CTRL+C",NULL);
+        print_error("\nStopping pwatch CTRL+C\n",NULL);
         exit (0); // terminates process
     }
     if (signum == SIGTERM){
-        print_error("Stopping pwatch",NULL);
+        print_error("\nStopping pwatch\n",NULL);
         exit (0);
     }
 }
