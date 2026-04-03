@@ -58,7 +58,7 @@ int do_sig (int argc, char *argv[]){
             continue;
         }
         //path building
-        char path[256];
+        char path[512];
         //build a string
         snprintf(path, sizeof(path), "/proc/%s/status", entry -> d_name);
 
