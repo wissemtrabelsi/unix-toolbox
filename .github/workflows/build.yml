@@ -14,7 +14,7 @@ jobs: # what to do
     steps: # list of steps
 
       - name: checkout code # step one name
-        uses: actions/checkout@v3 # use prebuilt action do down code to VM
+        uses: actions/checkout@v4 # use prebuilt action do down code to VM
     
       - name: build & runs bash-scripts
         run: cd bash-scripts && make test
