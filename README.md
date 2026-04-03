@@ -1,3 +1,4 @@
+![Build](https://github.com/wissemtrabelsi/unix-toolbox/actions/workflows/build.yml/badge.svg)
 # unix-toolbox
 
 A collection of Unix system programming tools written in C and Bash.
