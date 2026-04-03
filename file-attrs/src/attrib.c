@@ -26,7 +26,7 @@ int do_attrib(int argc, char *argv[])
     format_size(st.st_size,buf,sizeof(buf));
     printf("File size: %s \n", buf); //long int
     printf("Permissions: %o \n", st.st_mode);
-    printf("Number of hard links: %hu \n", st.st_nlink); //unsigned short
+    printf("Number of hard links: %lu \n", st.st_nlink); //unsigned long
     printf("Last modified time: %ld \n", st.st_mtime);
 
 

@@ -3,6 +3,7 @@
 //
 
 #include "utils.h"
+#include <sys/types.h>
 #include <unistd.h>//for write
 #include <stdio.h>
 // Calculates string length without using strlen()

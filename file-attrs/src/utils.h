@@ -6,7 +6,7 @@
 #define UTILS_H
 
 #include <stddef.h>//for size_t
-#include <sys/stat.h>// defines off_t, used by struct stat fields like st_size
+#include <sys/types.h>// defines off_t, used by struct stat fields like st_size
 size_t my_strlen(const char *str);
 void print_error(const char *msg, const char *filename);
 //size: file size in bytes from st.st_size (off_t matches stat's type)

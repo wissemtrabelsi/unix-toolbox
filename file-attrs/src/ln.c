@@ -1,5 +1,6 @@
 #include <stdio.h>//printf for verbose
 #include <unistd.h> //link(),symlink()
+#define _POSIX_C_SOURCE 200809L
 #include "utils.h"
 
 int do_ln(int argc,char *argv[])
