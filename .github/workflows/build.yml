@@ -1,0 +1,29 @@
+name: Build & Test # name of the workflow
+
+on: # when to run 
+  push: # run on every push
+    branches: [main] # only main branch
+  pull_request:
+    branches: [main]
+
+jobs: # what to do
+  build: # job name(ID) internal name
+    name: Build and Test All # optional
+    runs-on: ubuntu-latest # use ubuntu VM
+    
+    steps: # list of steps
+
+      - name: checkout code # step one name
+        uses: actions/checkout@v3 # use prebuilt action do down code to VM
+    
+      - name: build & runs bash-scripts
+        run: cd bash-scripts && make test
+
+      - name: build & runs file-attrs
+        run: cd file-attrs && make test
+
+      - name: build & runs file-io
+        run: cd file-io && make test
+
+      - name: build and run process-utils
+        run: cd process-utils && make test
